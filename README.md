@@ -40,6 +40,26 @@ O foco principal é **criar um ChatBot que vai se aprimorando através de regist
 <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank" rel="noreferrer">  
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="40" height="40" alt="JavaScript" title="JavaScript"/>  
 </a>  
+
+<a href="https://www.lua.org/" target="_blank" rel="noreferrer">  
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/lua/lua-original.svg" width="40" height="40" alt="Lua" title="Lua"/>  
+</a>  
+
+<a href="https://getbootstrap.com/" target="_blank" rel="noreferrer">  
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" width="40" height="40" alt="Bootstrap" title="Bootstrap"/>  
+</a>  
+
+<a href="https://www.python.org/" target="_blank" rel="noreferrer">  
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="40" height="40" alt="Python" title="Python"/>  
+</a>  
+
+<a href="https://www.mysql.com/" target="_blank" rel="noreferrer">  
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="40" height="40" alt="MySQL" title="MySQL"/>  
+</a>  
+
+<a href="https://www.php.net/" target="_blank" rel="noreferrer">  
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" width="40" height="40" alt="PHP" title="PHP"/>  
+</a>  
 </p>  
 
 ---
