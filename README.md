@@ -48,4 +48,3 @@ O foco principal é **criar um ChatBot que vai se aprimorando através de regist
 
 ---
 
-⚡ Gerado com **ProfileMe.dev | Crie um perfil incrível no GitHub em minutos**  
