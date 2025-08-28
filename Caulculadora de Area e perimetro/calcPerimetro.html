@@ -1,0 +1,123 @@
+<!DOCTYPE html> <!-- Informa ao navegador que o documento é HTML5 -->
+<html lang="pt-BR"> <!-- Define o idioma da página como português do Brasil -->
+<head>
+    <meta charset="UTF-8"> <!-- Garante que acentos e caracteres especiais sejam exibidos corretamente -->
+    <title>Calculadora de Área e Perímetro</title> <!-- Título que aparece na aba do navegador -->
+
+    <style>
+        /* Estilização geral do corpo da página */
+        body {
+            font-family: Arial, sans-serif; /* Define a fonte do texto */
+            background: linear-gradient(135deg, #74b9ff, #a29bfe); /* Fundo com degradê */
+            display: flex; /* Usa flexbox para centralizar */
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
+            height: 100vh; /* Ocupa toda a altura da tela */
+            margin: 0; /* Remove margens padrão */
+        }
+
+        /* Caixa principal da calculadora */
+        .container {
+            background: #fff; /* Cor de fundo branca */
+            padding: 30px; /* Espaçamento interno */
+            border-radius: 15px; /* Cantos arredondados */
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* Sombra suave */
+            width: 350px; /* Largura fixa */
+            text-align: center; /* Texto centralizado */
+        }
+
+        /* Estilo do título */
+       h1 {
+    font-size: 28px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    background: linear-gradient(90deg, #0984e3, #6c5ce7); /* Degradê azul -> roxo */
+    -webkit-background-clip: text; /* Faz o fundo ser usado como "máscara" no texto (Chrome/Safari) */
+    -webkit-text-fill-color: transparent; /* Deixa o texto transparente para o fundo aparecer */
+    text-align: center; /* Centraliza o título */
+        }
+
+        /* Estilo dos campos de entrada */
+        input {
+            width: 80%; /* Largura de 80% da caixa */
+            padding: 10px; /* Espaçamento interno */
+            margin: 8px 0; /* Espaçamento acima e abaixo */
+            border: 2px solid #0984e3; /* Borda azul */
+            border-radius: 8px; /* Cantos arredondados */
+            font-size: 16px; /* Tamanho da fonte */
+        }
+
+        /* Estilo do botão */
+        button {
+            background: #0984e3; /* Fundo azul */
+            color: #fff; /* Texto branco */
+            padding: 10px 20px; /* Espaçamento interno */
+            margin-top: 15px; /* Espaço acima */
+            border: none; /* Remove borda padrão */
+            border-radius: 8px; /* Cantos arredondados */
+            font-size: 16px; /* Tamanho da fonte */
+            cursor: pointer; /* Mostra a mãozinha ao passar o mouse */
+            transition: 0.3s; /* Suaviza a animação no hover */
+        }
+
+        /* Efeito quando passa o mouse no botão */
+        button:hover {
+            background: #74b9ff; /* Muda o fundo para azul claro */
+        }
+
+        /* Estilo da caixa onde o resultado aparece */
+        .resultado {
+            margin-top: 20px; /* Espaço acima */
+            padding: 15px; /* Espaçamento interno */
+            background: #dfe6e9; /* Fundo cinza claro */
+            border-radius: 10px; /* Cantos arredondados */
+            font-weight: bold; /* Texto em negrito */
+        }
+    </style>
+</head>
+<body>
+    <!-- Caixa central da calculadora -->
+    <div class="container">
+        <h1>Calculadora</h1> <!-- Título -->
+        <p>Digite as medidas do retângulo:</p> <!-- Texto explicativo -->
+
+        <!-- Campo de entrada para a largura -->
+        <input type="number" id="largura" placeholder="Largura (cm)">
+        <!-- Campo de entrada para o comprimento -->
+        <input type="number" id="comprimento" placeholder="Comprimento (cm)">
+        <br> <!-- Quebra de linha -->
+
+        <!-- Botão que chama a função calcular() ao ser clicado -->
+        <button onclick="calcular()">Calcular</button>
+
+        <!-- Div onde os resultados aparecerão -->
+        <div id="saida" class="resultado"></div>
+    </div>
+
+    <script>
+        // Função que faz os cálculos
+        function calcular() {
+            // Pega o valor digitado na largura e transforma em número decimal
+            var largura = parseFloat(document.getElementById("largura").value);
+            // Pega o valor digitado no comprimento e transforma em número decimal
+            var comprimento = parseFloat(document.getElementById("comprimento").value);
+
+            // Verifica se os valores são válidos (não nulos, não negativos e não vazios)
+            if (isNaN(largura) || isNaN(comprimento) || largura <= 0 || comprimento <= 0) {
+                // Mostra mensagem de erro
+                document.getElementById("saida").innerHTML = "Por favor, insira valores válidos!";
+                return; // Encerra a função
+            }
+
+            // Calcula a área (largura * comprimento)
+            var area = largura * comprimento;
+            // Calcula o perímetro (2 * (largura + comprimento))
+            var perimetro = 2 * (largura + comprimento);
+
+            // Exibe os resultados dentro da div com id "saida"
+            document.getElementById("saida").innerHTML = 
+                "📐 Área: " + area + " cm²<br>" + // Mostra a área
+                "📏 Perímetro: " + perimetro + " cm"; // Mostra o perímetro
+        }
+    </script>
+</body>
+</html>
